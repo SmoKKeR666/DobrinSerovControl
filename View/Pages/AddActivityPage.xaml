@@ -1,0 +1,36 @@
+﻿<Page x:Class="DobrinSerovControl.View.Pages.AddActivityPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:DobrinSerovControl.View.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="600" d:DesignWidth="700"
+      Title="AddActivityPage">
+
+    <Grid Margin="20">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="400" />
+            <ColumnDefinition Width="1*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+        </Grid.RowDefinitions>
+        <TextBlock Grid.Column="1" Grid.Row="1" Text="Введите соревнование:" FontSize="20"/>
+        <TextBox Grid.Column="1" Grid.Row="3" Name="EventNameTxb" FontSize="20"/>
+        <TextBlock Grid.Column="1" Grid.Row="5" Text="Выберите его вид:" FontSize="20"/>
+        <ComboBox Grid.Column="1" Grid.Row="7" Name="EventTypeCmb" FontSize="20"/>
+        <Button Grid.Column="1" Grid.Row="9" Content="Добавить" FontSize="20" Name="AddBtn" Click="AddBtn_Click"/>
+    </Grid>
+</Page>

@@ -1,0 +1,57 @@
+﻿<Page x:Class="DobrinSerovControl.View.Pages.Report1Page"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:DobrinSerovControl.View.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="600" d:DesignWidth="700"
+      Title="Report1Page">
+
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="250" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="20" />
+            <ColumnDefinition Width="1*" />
+        </Grid.ColumnDefinitions>
+        <DataGrid Grid.ColumnSpan="3" Name="DatGr" AutoGenerateColumns="False" 
+                  HorizontalAlignment="Left" Loaded="DatGr_Loaded" Width="auto">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Дата" Width="1*"
+                                    Binding="{Binding DateEvent}"/>
+                <DataGridTextColumn Header="Команда" Width="1*"
+                                    Binding="{Binding Group.Name}"/>
+                <DataGridTextColumn Header="Специальность" Width="1*"
+                                    Binding="{Binding Special.Name}"/>
+                <DataGridTextColumn Header="Соревнование" Width="1*"
+                                    Binding="{Binding Activity.Name}"/>
+                <DataGridTextColumn Header="Статус" Width="1*"
+                                    Binding="{Binding Directions.Name}"/>
+                <DataGridTextColumn Header="Балл" Width="1*"
+                                    Binding="{Binding Mark}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <TextBlock Grid.Row="2" Grid.Column="0" Text="Выберите начало периода" FontSize="20"/>
+        <DatePicker Grid.Row="4" Grid.Column="0" Name="DateStart" FontSize="20"/>
+        <TextBlock Grid.Row="2" Grid.Column="2" Text="Выберите конец периода" FontSize="20"/>
+        <DatePicker Grid.Row="4" Grid.Column="2" Name="DateEnd" FontSize="20"/>
+        <TextBlock Grid.Row="6" Grid.Column="0" Text="Выберите команду" FontSize="20"/>
+        <ComboBox Grid.Row="6" Grid.Column="2" Name="TeamCmb" FontSize="20"/>
+        <TextBlock Grid.Row="8" Grid.Column="0" Text="Количество выступлений" FontSize="20"/>
+        <TextBox Grid.Row="8" Grid.Column="2" Name="PerformanceTxb" FontSize="20"/>
+        <Button Grid.Row="10" Grid.Column="2" Content="Выбрать" FontSize="20" Name="ChooseBtn" Click="ChooseBtn_Click"/>
+    </Grid>
+</Page>
